@@ -9,11 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var labelText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+var score = 0
+    @IBAction func clickButton(_ sender: Any) {
+        score += 1
+        labelText.text = "Значение счётчика: \(score)"
+    }
 }
 
